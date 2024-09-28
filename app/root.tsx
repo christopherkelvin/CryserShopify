@@ -5,20 +5,25 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import type { LinksFunction } from "@remix-run/node";
+import type { LinksFunction, MetaFunction } from "@remix-run/node";
+import stylesheet from "~/tailwind.css?url";
+import Sider from "~/components/Sider"
 
-import "./tailwind.css";
-
+export const meta: MetaFunction = () => {
+  return [
+    { title: "Cryser Shopify App" },
+    { name: "description", content: "Welcome to Cryser Shop" },
+  ];
+};
 export const links: LinksFunction = () => [
-  { rel: "preconnect", href: "https://fonts.googleapis.com" },
+  { rel: "stylesheet", href: stylesheet },
   {
-    rel: "preconnect",
-    href: "https://fonts.gstatic.com",
-    crossOrigin: "anonymous",
+    rel: "stylesheet",
+    href: "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap",
   },
   {
     rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
+    href: "https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap",
   },
 ];
 
@@ -31,8 +36,16 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body>
-        {children}
+      <body className=" font-jakarta bg-primary-dark">
+        <div className="grid grid-cols-[20%,1fr,20%]">
+          <header className="">
+            <div className="">
+              <Sider />
+            </div>
+          </header>
+          <main className="">{children}</main>
+          <div className="bg-primary-light">receipts</div>
+        </div>
         <ScrollRestoration />
         <Scripts />
       </body>
