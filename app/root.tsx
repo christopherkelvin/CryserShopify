@@ -7,7 +7,7 @@ import {
 } from "@remix-run/react";
 import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import stylesheet from "~/tailwind.css?url";
-import Sider from "~/components/Sider"
+import {Sider} from "~/components/sider";
 
 export const meta: MetaFunction = () => {
   return [
@@ -36,15 +36,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className=" font-jakarta bg-primary-dark">
-        <div className="grid grid-cols-[20%,1fr,20%]">
-          <header className="">
-            <div className="">
-              <Sider />
-            </div>
-          </header>
+      <body className=" font-jakarta min-h-screen bg-black ">
+        <div className="grid grid-cols-[300px,1fr] ">
+          <Sider />
           <main className="">{children}</main>
-          <div className="bg-primary-light">receipts</div>
         </div>
         <ScrollRestoration />
         <Scripts />
