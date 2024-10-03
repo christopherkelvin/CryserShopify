@@ -1,3 +1,5 @@
+import { FaUser } from "react-icons/fa";
+import {BiSolidOffer} from "react-icons/bi"
 import {
   MdDashboard,
   MdOutlineProductionQuantityLimits,
@@ -29,5 +31,17 @@ export const NavList = [
     link: "/customersupport",
     title: "Customer Support",
     icon: MdHelp,
+  },
+];
+export const UserList = [
+  {
+    link: "/user",
+    title: "User",
+    icon: FaUser,
+  },
+  {
+    link: "/offers",
+    title: "Offers",
+    icon: BiSolidOffer,
   },
 ];
