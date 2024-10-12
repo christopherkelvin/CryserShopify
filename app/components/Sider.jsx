@@ -3,11 +3,13 @@ import { NavList, UserList } from "../utils/navlist";
 export function Sider() {
   return (
     <>
-      <div className=" bg-slate-200 min-h-screen rounded-2xl rounded-tl-none rounded-bl-none overflow-hidden">
-        <div className="bg-slate-200 w-full flex py-2 items-center gap-5">
-          <div className="text-3xl uppercase font-serif">Cryser Shop</div>
+      <div className=" bg-slate-200 dark:bg-slate-900 min-h-screen">
+        <div className=" w-full text-center py-5">
+          <div className="text-3xl uppercase font-bold font-merriweather dark:text-white">
+            Cryser Shop
+          </div>
         </div>
-        <div className=" mt-10 bg-white/40  rounded-xl flex flex-col pb-6">
+        <div className="bg-white/40 dark:bg-white/30 rounded-xl flex flex-col pb-6">
           <h1 className="text-sm text-black/40 font-extrabold p-4 pb-3">
             Menu
           </h1>
@@ -18,9 +20,9 @@ export function Sider() {
                 key={i}
                 to={nav.link}
                 className={({ isActive }) =>
-                  isActive
-                    ? "text-white  font-bold px-6 py-3 bg-black/50 flex items-center gap-3"
-                    : "text-gray-900  font-bold px-6 py-3 flex items-center gap-3"
+                  `font-bold px-6 py-3 flex items-center gap-3 font-jakarta ${
+                    isActive ? "text-white bg-black/50" : "text-gray-900 "
+                  }`
                 }
               >
                 <Icon size={24} />
@@ -28,7 +30,7 @@ export function Sider() {
               </NavLink>
             );
           })}
-          <hr className="border-gray-900 pb-10" />
+          <hr className="border-gray-900 pb-3" />
           <h1 className="text-sm text-black/40 font-extrabold p-4 pb-3">
             Account
           </h1>
@@ -39,9 +41,9 @@ export function Sider() {
                 to={user.link}
                 key={i}
                 className={({ isActive }) =>
-                  isActive
-                    ? "text-white  font-bold px-6 py-3 bg-black/50 flex items-center gap-3"
-                    : "text-gray-900  font-bold px-6 py-3 flex items-center gap-3"
+                  `font-bold px-6 py-3 flex items-center gap-3 ${
+                    isActive ? "text-white bg-black/50" : "text-gray-900 "
+                  }`
                 }
               >
                 <Icon size={24} />

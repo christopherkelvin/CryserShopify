@@ -8,7 +8,6 @@ import {
 import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import stylesheet from "~/tailwind.css?url";
 import {Sider} from "~/components/sider";
-
 export const meta: MetaFunction = () => {
   return [
     { title: "Cryser Shopify App" },
@@ -25,6 +24,10 @@ export const links: LinksFunction = () => [
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap",
   },
+  {
+    rel: "stylesheet",
+    href:'https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap'
+  }
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -36,10 +39,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className=" font-jakarta min-h-screen bg-slate-400/70">
+      <body className=" font-merriweather min-h-screen bg-slate-400/70 dark">
         <div className="grid grid-cols-[300px,1fr] ">
           <Sider />
-          <main className="">{children}</main>
+          <main className="">
+            {children}
+          </main>
         </div>
         <ScrollRestoration />
         <Scripts />
