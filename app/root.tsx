@@ -36,7 +36,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className=" font-jakarta min-h-screen bg-black ">
+      <body className=" font-jakarta min-h-screen bg-slate-400/70">
         <div className="grid grid-cols-[300px,1fr] ">
           <Sider />
           <main className="">{children}</main>

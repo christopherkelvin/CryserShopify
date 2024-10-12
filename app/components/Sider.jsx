@@ -1,13 +1,11 @@
 import { NavLink } from "@remix-run/react";
-import logo from "../assets/images/logo.png";
 import { NavList, UserList } from "../utils/navlist";
 export function Sider() {
   return (
     <>
-      <div className=" bg-white/20 min-h-screen rounded-2xl overflow-hidden">
-        <div className="bg-black/60 w-full flex py-2 items-center gap-5">
-          <img src={logo} alt="" className=" h-20 w-auto" />
-          {/* <div className="text-3xl uppercase font-serif">Cryser Shop</div> */}
+      <div className=" bg-slate-200 min-h-screen rounded-2xl rounded-tl-none rounded-bl-none overflow-hidden">
+        <div className="bg-slate-200 w-full flex py-2 items-center gap-5">
+          <div className="text-3xl uppercase font-serif">Cryser Shop</div>
         </div>
         <div className=" mt-10 bg-white/40  rounded-xl flex flex-col pb-6">
           <h1 className="text-sm text-black/40 font-extrabold p-4 pb-3">
