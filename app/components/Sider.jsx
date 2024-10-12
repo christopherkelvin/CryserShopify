@@ -3,7 +3,7 @@ import { NavList, UserList } from "../utils/navlist";
 export function Sider() {
   return (
     <>
-      <div className=" bg-slate-200 dark:bg-slate-900 min-h-screen">
+      <div className=" bg-slate-300 dark:bg-slate-900 min-h-screen">
         <div className=" w-full text-center py-5">
           <div className="text-3xl uppercase font-bold font-merriweather dark:text-white">
             Cryser Shop

@@ -39,7 +39,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className=" font-merriweather min-h-screen bg-slate-400/70 dark">
+      <body className=" font-merriweather min-h-screen bg-slate-400/70 ">
         <div className="grid grid-cols-[300px,1fr] ">
           <Sider />
           <main className="">
