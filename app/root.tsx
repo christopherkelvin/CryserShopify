@@ -69,6 +69,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       >
         <div className="grid grid-cols-[300px,1fr]">
           <Sider />
+          <div></div>
           <main>{children}</main>
         </div>
         <ScrollRestoration />

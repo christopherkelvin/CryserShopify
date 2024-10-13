@@ -4,7 +4,7 @@ export default function Index() {
   return (
     <>
       <TopNav name="Dashboard" />
-      <h1>Hello shop</h1>
+      <div className="dark:bg-slate-700 min-h-screen">Hello shop</div>
     </>
   );
 }
