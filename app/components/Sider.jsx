@@ -3,13 +3,13 @@ import { NavList, UserList } from "../utils/navlist";
 export function Sider() {
   return (
     <>
-      <div className=" bg-slate-300 dark:bg-slate-900 min-h-screen">
+      <div className=" bg-gray-300 dark:bg-slate-900 min-h-screen">
         <div className=" w-full text-center py-5">
           <div className="text-3xl uppercase font-bold font-merriweather dark:text-white">
             Cryser Shop
           </div>
         </div>
-        <div className="bg-white/40 dark:bg-white/30 rounded-xl flex flex-col pb-6">
+        <div className=" dark:bg-white/30 flex flex-col pb-6">
           <h1 className="text-sm text-black/40 font-extrabold p-4 pb-3">
             Menu
           </h1>
