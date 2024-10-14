@@ -34,7 +34,12 @@ export const links: LinksFunction = () => [
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
-  const [mode, setMode] = useState("light");
+  if (typeof window !== "undefined") {
+    
+    const defaultMode = window.localStorage.getItem("mode");
+  console.log(defaultMode)
+  }
+  const [mode, setMode] = useState('light');
 
   useEffect(() => {
     if (typeof window !== "undefined") {
