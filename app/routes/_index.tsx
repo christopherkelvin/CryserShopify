@@ -9,7 +9,7 @@ export default function Index() {
         <div className="dark:bg-slate-700 min-h-screen">
           <ItemsMiddle/>
         </div>
-        <PaySide />
+        {/* <PaySide /> */}
       </div>
     </>
   );

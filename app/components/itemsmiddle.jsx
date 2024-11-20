@@ -1,4 +1,4 @@
-import item from "../assets/images/Items.png";
+import item from "../assets/images/Shoe.png";
 export function ItemsMiddle() {
   return (
     <div className="">

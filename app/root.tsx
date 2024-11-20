@@ -72,7 +72,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           mode === "dark" ? "dark" : "light"
         }`}
       >
-        <div className="grid grid-cols-[300px,1fr]">
+        <div className="grid grid-cols-[250px,1fr]">
           <Sider />
           <div></div>
           <main>{children}</main>
