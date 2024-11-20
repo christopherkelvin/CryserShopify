@@ -68,7 +68,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body
-        className={`font-merriweather min-h-screen bg-gray-200 ${
+        className={`font-merriweather min-h-screen bg-pink-300/50 ${
           mode === "dark" ? "dark" : "light"
         }`}
       >

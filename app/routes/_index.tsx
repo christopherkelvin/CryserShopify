@@ -1,5 +1,5 @@
 import { TopNav } from "~/components/topnav";
-import { PaySide } from "~/components/paymentsider";
+// import { PaySide } from "~/components/paymentsider";
 import {ItemsMiddle} from "~/components/itemsmiddle"
 export default function Index() {
   return (
