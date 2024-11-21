@@ -5,7 +5,8 @@ export function CartEmpty() {
       <div className=" mt-32 ml-8">
         <img src={cartPic} className=" h-56" alt="" />
         <div className="text-center pr-10 text-gray-700">
-          Your cart is empty
+                  Your cart is empty
+                  
         </div>
       </div>
     </>
