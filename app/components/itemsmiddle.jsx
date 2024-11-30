@@ -16,7 +16,7 @@ export function ItemsMiddle(data) {
               <div className=" mt-10 flex flex-col items-center">
                 <h1 className=" font-bold text-[16px]">{data.name}</h1>
                 <div className=" font-sans font-bold text-black/50">
-                  {data.price.toLocaleString("en-US")}
+                  Tsh {data.price.toLocaleString("en-US")}
                 </div>
                 <div className=" mt-1">
                   <div className=" bg-black/40 h-[1px] w-60" />
