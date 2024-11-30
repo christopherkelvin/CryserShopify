@@ -8,7 +8,6 @@ import {
 import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import stylesheet from "~/tailwind.css?url";
 import { Sider } from "~/components/sider";
-import { useState, useEffect } from "react";
 
 export const meta: MetaFunction = () => {
   return [
@@ -34,33 +33,8 @@ export const links: LinksFunction = () => [
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
-  if (typeof window !== "undefined") {
-    
-    const defaultMode = window.localStorage.getItem("mode");
-  console.log(defaultMode)
-  }
-  const [mode, setMode] = useState('light');
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const currentMode = window.localStorage.getItem("mode");
-      if (currentMode) {
-        setMode(currentMode);
-      }
-    }
-  }, []);
-
-  // Sync mode changes with localStorage
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.localStorage.setItem("mode", mode);
-      setMode(mode);
-      console.log(mode);
-    }
-  }, [mode]);
-
   return (
-    <html lang="en" className={mode === "dark" ? "dark" : "light"}>
+    <html lang="en" >
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -68,9 +42,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body
-        className={`font-merriweather min-h-screen bg-pink-300/50 ${
-          mode === "dark" ? "dark" : "light"
-        }`}
+        className={`font-merriweather min-h-screen bg-pink-300/50`}
       >
         <div className="grid grid-cols-[250px,1fr]">
           <Sider />
