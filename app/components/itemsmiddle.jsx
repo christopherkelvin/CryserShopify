@@ -12,7 +12,7 @@ export function ItemsMiddle(data) {
                   <img src={Veg} alt="" className=" h-12" />
                 </div>
               </div>
-              <img src={data.image} className="h-36 w-full" alt="" />
+              <img src={data.image} className="h-36 w-full object-cover object-top" alt="" />
               <div className=" mt-10 flex flex-col items-center">
                 <h1 className=" font-bold text-[16px]">{data.name}</h1>
                 <div className=" font-sans font-bold text-black/50">
