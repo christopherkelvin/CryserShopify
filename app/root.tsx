@@ -9,6 +9,8 @@ import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import stylesheet from "~/tailwind.css?url";
 import { Sider } from "~/components/sider";
 import { PaySide } from "~/components/paymentsider";
+import { Provider } from "react-redux";
+import {store} from "./stores"
 
 export const meta: MetaFunction = () => {
   return [
@@ -42,17 +44,20 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className={`font-merriweather min-h-screen bg-pink-300/50`}>
-        <div className="grid grid-cols-[250px,1fr,300px]">
-          <Sider />
-          <div />
-          <main>{children}</main>
-          <div></div>
-          <PaySide />
-        </div>
-        <ScrollRestoration />
-        <Scripts />
-      </body>
+      <Provider store={store}>
+        {" "}
+        <body className={`font-merriweather min-h-screen bg-pink-300/50`}>
+          <div className="grid grid-cols-[250px,1fr,300px]">
+            <Sider />
+            <div />
+            <main>{children}</main>
+            <div></div>
+            <PaySide />
+          </div>
+          <ScrollRestoration />
+          <Scripts />
+        </body>
+      </Provider>
     </html>
   );
 }
