@@ -38,7 +38,7 @@ export function ItemsMiddle(data) {
                   <div className=" bg-black/40 h-[1px] w-60" />
                   <input
                     type="button"
-                    className=" p-2 bg-gradient-to-r from-pink-400 to-pink-300 m-3 mx-10 text-center rounded-3xl cursor-pointer hover:from-pink-500 hover:to-pink-400"
+                    className=" py-2 px-4 bg-gradient-to-r from-pink-400 to-pink-300 m-3 mx-20 text-center rounded-3xl cursor-pointer hover:from-pink-500 hover:to-pink-400"
                     onClick={() => handleAddToCart(data.id)}
                     value="Add to Cart"
                   />
