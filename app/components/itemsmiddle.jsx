@@ -1,9 +1,8 @@
 import Veg from "../assets/images/VegLogo.png";
-import { useSelector, useDispatch } from "react-redux";
+import {  useDispatch } from "react-redux";
 import { addToCart } from "../stores/cart";
 export function ItemsMiddle(data) {
   const product = data.data;
-  const carts = useSelector(store => store.cart.items);
   const dispatch = useDispatch();
   const handleAddToCart = (productId) => {
     dispatch(
@@ -12,7 +11,6 @@ export function ItemsMiddle(data) {
         quantity: 1
     }));
   }
-  // console.log(carts);
   return (
     <div className=" m-12 flex gap-10 overflow-hidden flex-wrap justify-start">
       {product ? (
