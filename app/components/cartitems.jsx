@@ -1,5 +1,3 @@
-// import { useSelector } from "react-redux";
-// import cartImage from "../assets/images/ShopItem.jpeg";
 import { useState, useEffect } from "react";
 import { Product } from "../utils/product";
 export function CartItems(data) {
@@ -11,11 +9,15 @@ export function CartItems(data) {
       )[0];
       setDetails(findDetails);
     }, [productId]);
+  // const handleAddQuantity = () => {
+  //   quantity =+ quantity;
+  // }
     return (
       <>
         {details ? (
           <>
             <div className="">
+              
               <div className=" h-24 relative bg-white m-3 flex overflow-hidden items-center rounded-xl ">
                 <img
                   src={details.image}
@@ -28,7 +30,7 @@ export function CartItems(data) {
                     {details.description}
                   </div>
                   <div className="font-poppins font-bold mt-2">
-                    {details.price}
+                    Tsh {details.price}/=
                   </div>
                 </div>
                 <div className=" absolute right-4 drop-shadow-[0_80px_30px_#0007]">
