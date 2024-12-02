@@ -1,6 +1,6 @@
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
+// import cartImage from "../assets/images/ShopItem.jpeg";
 import { useState, useEffect } from "react";
-import cartImage from "../assets/images/ShopItem.jpeg";
 import { Product } from "../utils/product";
 export function CartItems(data) {
     const [details, setDetails] = useState([]);
