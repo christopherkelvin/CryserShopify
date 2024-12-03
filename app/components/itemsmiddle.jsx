@@ -1,6 +1,7 @@
 import Veg from "../assets/images/VegLogo.png";
 import {  useDispatch } from "react-redux";
 import { addToCart } from "../stores/cart";
+import { IoMdSearch } from "react-icons/io";
 export function ItemsMiddle(data) {
   const product = data.data;
   const dispatch = useDispatch();
@@ -14,8 +15,14 @@ export function ItemsMiddle(data) {
   return (
     <div>
       <div className="flex w-full justify-center my-4 relative">
-        <input type="text" className=" w-1/2 h-12 rounded-3xl bg-gradient-to-r from-pink-400 to-pink-500" />
-        <button className="absolute right-[267px] top-3">Search</button>
+        <input
+          type="text"
+          className=" w-1/2 h-12 rounded-3xl bg-gradient-to-r from-pink-400 to-pink-500 placeholder:text-black pl-8 pt-1"
+          placeholder="Search here..."
+        />
+        <button className="absolute right-[265px] top-[13px]">
+          <IoMdSearch  className=" text-2xl" />
+        </button>
       </div>
       <div className=" m-10 mt-0 flex gap-10 overflow-hidden flex-wrap justify-start">
         {product ? (

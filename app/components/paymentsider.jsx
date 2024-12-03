@@ -6,11 +6,14 @@ export const PaySide = () => {
   return (
     <div className="fixed right-0 min-h-screen w-[350px] bg-blue-500/50 overflow-hidden">
       <CartHeader />
-      {carts ? (
-        carts.map((cart, i) => <CartItems key={i} data={cart} />)
-      ) : (
-        <CartEmpty />
-      )}
+      <div>
+        {carts ? (
+          carts.map((cart, i) => <CartItems key={i} data={cart} />)
+        ) : (
+          <CartEmpty />
+        )}
+      </div>
+      
     </div>
   );
 };
