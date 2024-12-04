@@ -17,7 +17,6 @@ export function CartItems(data) {
         {details ? (
           <>
             <div className="">
-              
               <div className=" h-24 relative bg-white m-3 flex overflow-hidden items-center rounded-xl ">
                 <img
                   src={details.image}
