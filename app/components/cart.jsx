@@ -41,11 +41,3 @@ export function CartHeader() {
     </>
   );
 }
-
-export function CartTotal() {
-  return (
-    <>
-      <div></div>
-    </>
-  );
-}
