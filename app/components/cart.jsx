@@ -19,7 +19,7 @@ export function CartHeader() {
     <>
       <div className="relative">
         <div className="absolute bg-white h-72 w-72 rounded-full blur-2xl -top-28 -right-28" />
-        <div className="absolute bg-white h-[200px] w-[200px] rounded-full blur-xl -left-14 top-[580px]" />
+        <div className="absolute bg-white z-0 h-[200px] w-[200px] rounded-full blur-xl -left-14 top-[580px]" />
       </div>
       <div className="mt-14 ml-5">
         <h1 className=" text-gray-800 font-poppins font-bold text-2xl">
