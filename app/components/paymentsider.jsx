@@ -1,7 +1,8 @@
 import { CartEmpty, CartHeader } from "../components/cart";
 import { CartItems } from "../components/cartitems";
 import { useSelector } from "react-redux";
-import {CartFooter} from "./cartfooter"
+import { ScrollArea } from "./ui/scroll-area";
+import { CartFooter } from "./cartfooter";
 export const PaySide = () => {
   const carts = useSelector((store) => store.cart.items);
   return (
@@ -9,13 +10,13 @@ export const PaySide = () => {
       <div>
         <CartHeader />
       </div>
-      <div>
+      <ScrollArea className="h-[400px] w-[350px] rounded-md border-none ">
         {carts ? (
           carts.map((cart, i) => <CartItems key={i} data={cart} />)
         ) : (
           <CartEmpty />
         )}
-      </div>
+      </ScrollArea>
       <div>
         <CartFooter />
       </div>
