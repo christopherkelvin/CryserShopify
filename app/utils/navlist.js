@@ -13,11 +13,6 @@ export const NavList = [
     icon: MdDashboard,
   },
   {
-    link: "/products",
-    title: "Products",
-    icon: MdOutlineProductionQuantityLimits,
-  },
-  {
     link: "/payment",
     title: "Payment",
     icon: MdPayments,
