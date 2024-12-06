@@ -13,10 +13,10 @@ export function CartItems(data) {
     setDetails(findDetails);
   }, [productId]);
   const handleMinusQuantity = () => {
-    dispatch(changQuantity({ productId: productId, quantity: quantity - 1 }));
+    dispatch(changQuantity({  productId:details.id ,quantity: quantity - 1 }));
   };
   const handleAddQuantity = () => {
-    dispatch(changQuantity({ productId: productId, quantity: quantity + 1 }));
+    dispatch(changQuantity({  productId: details.id, quantity: quantity + 1 }));
   };
   return (
     <>
