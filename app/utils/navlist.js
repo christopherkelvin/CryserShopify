@@ -1,16 +1,15 @@
 import { FaUser } from "react-icons/fa";
 import {BiSolidOffer} from "react-icons/bi"
 import {
-  MdDashboard,
-  MdOutlineProductionQuantityLimits,
   MdPayments,
   MdHelp,
 } from "react-icons/md";
+import { FaHome } from "react-icons/fa";
 export const NavList = [
   {
     link: "/",
-    title: "Dashboard",
-    icon: MdDashboard,
+    title: "Home",
+    icon: FaHome,
   },
   {
     link: "/payment",
