@@ -18,7 +18,7 @@ export function CartFooter() {
         <div className="flex justify-between w-[320px]">
           <div className="mt-1 font-serif">Subtotal</div>
           <div className=" font-mono font-bold text-lg">
-            Tsh {total.toFixed(2)} /=
+            Tsh {total.toLocaleString("en-US")} /=
           </div>
         </div>
         <button className=" py-1.5 px-8 rounded-lg text-white font-sans float-right bg-blue-600/90 mt-6 hover:bg-blue-700">
