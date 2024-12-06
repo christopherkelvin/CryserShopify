@@ -5,10 +5,11 @@ import { IoMdSearch } from "react-icons/io";
 export function ItemsMiddle(data) {
   const product = data.data;
   const dispatch = useDispatch();
-  const handleAddToCart = (productId) => {
+  const handleAddToCart = (productId,productPrice) => {
     dispatch(
       addToCart({
         productId,
+        productPrice,
         quantity: 1
     }));
   }
@@ -49,7 +50,7 @@ export function ItemsMiddle(data) {
                     <input
                       type="button"
                       className=" py-2 px-4 bg-gradient-to-r from-pink-400 to-pink-300 m-3 mx-20 text-center rounded-3xl cursor-pointer hover:from-pink-500 hover:to-pink-400"
-                      onClick={() => handleAddToCart(data.id)}
+                      onClick={() => handleAddToCart(data.id,data.price)}
                       value="Add to Cart"
                     />
                   </div>
